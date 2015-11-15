@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:flatui="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".LoginActivity"
+    android:id="@+id/baseLoginLayout">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:layout_weight="0">
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <com.cengalabs.flatui.views.FlatEditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/username"
+                    android:textColor="#000"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentEnd="false"
+                    flatui:fl_fieldStyle="fl_box"
+                    flatui:fl_theme="@array/dark"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                >
+                <com.cengalabs.flatui.views.FlatEditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:inputType="textPassword"
+                    android:id="@+id/password"
+                    android:textColor="#000"
+                    flatui:fl_theme="@array/dark"
+                    flatui:fl_fieldStyle="fl_box"/>
+
+                <com.cengalabs.flatui.views.FlatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+                    android:onClick="onPressed"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/password"
+                    android:id="@+id/loginButton"
+                    android:layout_marginTop="15dp"
+                    android:textSize="16sp"
+                    flatui:fl_theme="@array/dark" />
+                <com.cengalabs.flatui.views.FlatTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/loginButton"
+                    android:gravity="center_horizontal"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/loginText"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <WebView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/loginWebView"
+            android:layout_weight="2"></WebView>
+    </LinearLayout>
+
+
+</RelativeLayout>
