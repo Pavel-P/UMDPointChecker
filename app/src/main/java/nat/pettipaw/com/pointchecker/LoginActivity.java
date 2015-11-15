@@ -50,9 +50,6 @@ public class LoginActivity extends Activity {
         view.clearFormData();
         view.addJavascriptInterface(new JavascriptLoginHandler(), "android");
 
-        ((EditText) findViewById(R.id.username)).setText("natpett");
-        ((EditText) findViewById(R.id.password)).setText("asdfASDF123");
-
         handler = new Handler();
         CookieManager cookieManager = CookieManager.getInstance();
         cookieManager.removeAllCookies(new ValueCallback<Boolean>() {

@@ -1,5 +1,6 @@
 package nat.pettipaw.com.pointchecker;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Handler;
@@ -186,7 +187,8 @@ public class PointViewerActivity extends ActionBarActivity implements CalendarDa
 
     public void onViewAll(View v){
 
-
+        Intent intent = new Intent(PointViewerActivity.this, TransactionViewerActivity.class);
+        startActivity(intent);
 
     }
 
